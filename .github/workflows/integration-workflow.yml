@@ -6,6 +6,10 @@ jobs:
     name: Build and test
     runs-on: ubuntu-latest
     steps:
+    - name: Go to Test folder
+    - run: cd DotnetTemplate.Web.Tests
+    - name: Run C# Tests
+    - run: dotnet test
     - uses: actions/checkout@v2
 
     - name: Hello world
