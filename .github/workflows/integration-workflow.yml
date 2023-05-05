@@ -8,7 +8,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Run C# Tests
-      working-directory: ../../DotnetTemplate.Web.Tests
+      working-directory: DotnetTemplate.Web.Tests
       run: dotnet test
 
     - name: Hello world
