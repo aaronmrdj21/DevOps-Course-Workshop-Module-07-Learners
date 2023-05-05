@@ -19,7 +19,9 @@ jobs:
     - name: Run TypeScript Test
       working-directory: DotnetTemplate.Web
       run: npm t
-    - name: Hello world
-      uses: actions/hello-world-javascript-action@v1.1 # Name of the action. This uses https://github.com/actions/hello-world-javascript-action
-      with:                                            # This section is needed if you need to pass arguments to the action
-        who-to-greet: 'Mona the Octocat'
+    - name: Send custom JSON data to Slack workflow
+      payload: {"text": "Hello World, I'm a Slack Bot!"}
+      env: SLACK_WEBHOOK_URL: ${{ secrets.SLACKBOT }} 
+     
+
+
